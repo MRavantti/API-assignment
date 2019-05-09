@@ -3,10 +3,12 @@ import React, { Component } from 'react'
 export class Button extends Component {
 
     render() {
+
+      const { onClick, text} = this.props
         
     return (
       <div>
-            <button onClick={this.props.onClick}>{this.props.text}</button>
+            <button onClick={onClick}>{text}</button>
       </div>
     )
   }
