@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import Button from '../Button';
 import Image from '../Image';
+import SpeakButton from '../SpeakButton';
 
 export class Joke extends Component {
     state = {
@@ -20,9 +21,10 @@ export class Joke extends Component {
     getJoke = () => {
       const { images } = this.state;
 
-       this.state.ranImage = images[Math.floor(Math.random() * 7)];
-      
-      
+      this.setState({
+        ranImage: images[Math.floor(Math.random() * 7)]
+      });
+
       axios.get('https://api.chucknorris.io/jokes/random')
       .then(res => this.setState({
         joke: res.data
@@ -41,7 +43,10 @@ export class Joke extends Component {
       <div>
         <h3>{joke.value}</h3>
         <Image image={ranImage} />
+        <div>
         <Button text="New joke" onClick={() => this.getJoke()} />
+        <SpeakButton text={joke.value} />
+        </div>
       </div>
     )
   }
