@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 export class Button extends Component {
 
@@ -7,9 +7,9 @@ export class Button extends Component {
       const { onClick, text} = this.props
         
     return (
-      <div>
+      <Fragment>
             <button onClick={onClick}>{text}</button>
-      </div>
+      </Fragment>
     )
   }
 }
