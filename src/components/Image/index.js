@@ -9,14 +9,14 @@ export class Image extends Component {
       return (
         <Fragment>
             
-          <img src={image} alt="Norris"/>
+          <img src={ image } alt="Norris"/>
           </Fragment>
       )
     }
     return (
       <Fragment>
 
-        <img src={BackupImage} alt="Norris" />
+        <img src={ BackupImage } alt="Norris" />
       </Fragment>
     )
   }

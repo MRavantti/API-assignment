@@ -3,6 +3,7 @@ import axios from 'axios';
 import Button from '../Button';
 import Image from '../Image';
 import SpeakButton from '../SpeakButton';
+import './Joke.css';
 
 export class Joke extends Component {
     state = {
@@ -40,12 +41,12 @@ export class Joke extends Component {
       const { joke, ranImage } = this.state;  
             
     return (
-      <div>
-        <h3>{joke.value}</h3>
-        <Image image={ranImage} />
+      <div className="joke-container">
+        <Image image={ ranImage } />
+        <h3>{ joke.value }</h3>
         <div>
         <Button text="New joke" onClick={() => this.getJoke()} />
-        <SpeakButton text={joke.value} />
+        <SpeakButton text={ joke.value } />
         </div>
       </div>
     )

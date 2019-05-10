@@ -8,7 +8,7 @@ export class Button extends Component {
         
     return (
       <Fragment>
-            <button onClick={onClick}>{text}</button>
+            <button onClick={ onClick }>{ text }</button>
       </Fragment>
     )
   }

@@ -12,7 +12,7 @@ export class SpeakButton extends Component {
   render() {      
     return (
       <Fragment>
-        <button onClick={this.speak}>Read the joke to me</button>
+        <button onClick={ this.speak }>Read the joke to me</button>
         
       </Fragment>
     )
