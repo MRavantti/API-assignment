@@ -6,14 +6,14 @@ export class SpeakButton extends Component {
     const { text } = this.props;
     speechSynthesis.speak(
       new SpeechSynthesisUtterance(text)
-      );
+    );
   };
-  
-  render() {      
+
+  render() {
     return (
       <Fragment>
-        <button onClick={ this.speak }>Read the joke to me</button>
-        
+        <button onClick={this.speak}>Read the joke to me</button>
+
       </Fragment>
     )
   }
